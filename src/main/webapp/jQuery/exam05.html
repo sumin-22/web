@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	div {
+		width: 100px;
+		height: 100px;
+		background-color: red;
+		/*기본 position은 static
+		  absolute: 절대값. left, top을 기준으로 움직인다. 부모 태그 안에서만 움직인다.
+		  relative: 상대적. static으로 만들어진 위치를 기준으로 움직인다.
+		  fixed: 드래그를 해도 같은 곳에 고정
+		  */
+		position: absolute;
+	}
+</style>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$('div').animate({
+			width :'200px',
+			left : '100px'
+		},2000)
+	})
+</script>
+</head>
+<body>
+	<div></div>
+</body>
+</html>

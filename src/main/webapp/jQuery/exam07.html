@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	img {
+		width : 20%;
+		height : 30%;
+		float: left;
+	}
+	button{
+		height: 300px;
+		float: left;
+	}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$('#prevBtn').click(function(){
+			$('img').last().prependTo('span')
+		})
+		$('#nextBtn').click(function(){
+			$('img').first().appendTo('span')
+		})
+		
+		setInterval(function(){
+			$('#prevBtn').trigger('click')
+		}, 2000)
+	})
+</script>
+</head>
+<body>
+	<button id ="prevBtn">◀</button>
+	<span>
+	<img src="image/jin.jpg">
+	<img src="image/jh.jpg">
+	<img src="image/v.jpg">
+	<img src="image/jm.jpg">
+	</span>
+	<button id="nextBtn">▶</button>
+
+</body>
+</html>
